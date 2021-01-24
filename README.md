@@ -9,7 +9,7 @@ User can filter by launch date, successful launch and successful landing.
 
 Each program card will display details like Mission name, logo, launch year etc.
 
-In addition to this, this site is fully responsive and can be viewed \
+In addition to this, the site is fully responsive and can be viewed \
 in pc, laptop and mobile devices.
 
 ## Technology stack used
@@ -22,11 +22,11 @@ in pc, laptop and mobile devices.
 
 ## Steps to run the project in local
 
-Run the following command inside project directory
+Run the following command inside project directory:
 
 * npm install
 * npm start
-* app will open in your browser at port 3000
+* site will open in your browser at port 3000
 
 ## Available Scripts
 
