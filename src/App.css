@@ -1,38 +1,190 @@
+:root {
+  --app-background: #efefef;
+  --white: #fff;
+  --light-green: lightgreen;
+  --green: rgb(3, 199, 3);
+}
+
 .App {
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+}
+
+aside {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 15%;
+}
+
+aside h3 {
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: var(--white);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.program-list-section {
+  width: 85%;
+  margin-top: 10px;
+}
+
+.filter-section {
+  background-color: var(--white);
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 3px;
+}
+
+.filter-section .year {
+  width: 50%;
+}
+
+.filter-section .year span {
+  display: inline-block;
+  background: var(--light-green);
+  padding: 3px 12px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-section .year:nth-child(even) {
+  text-align: right;
+}
+
+.program-list {
+  padding: 10px;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.active-year-link {
+  background-color: var(--green) !important;
+}
+
+.program {
+  background-color: var(--white);
+  width: calc(25% - 10px);
+  margin: 10px 5px;
+  margin-top: 0;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.filter-label {
+  padding-top: 10px;
+  text-align: center;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+.filter-label label {
+  display: block;
+  border-bottom: 1px solid var(--app-background);
+  color: #555;
+  width: 70%;
+}
+
+.program div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  color: rgb(0, 0, 199);
+}
+
+.program label {
+  font-weight: bold;
+  color: #000;
+}
+
+.mission-id {
+  flex-direction: column;
+}
+
+.mission-id ul {
+  margin-top: 0;
+}
+
+.mission-title {
+  font-weight: bold;
+  color: rgb(0, 0, 199);
+  margin-top: 10px;
+}
+
+.mission-logo {
+  width: 100%;
+  background-color: var(--app-background);
+}
+
+.mission-logo img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+footer {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer label {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+  .program {
+    width: calc(50% - 10px);
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  .program-list-section {
+    width: 75%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Mobile View */
+@media screen and (max-width: 700px) {
+  .program {
+    width: calc(100%);
+    margin: 10px 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .program-list-section {
+    width: 100%;
+  }
+
+  .program-list {
+    padding: 10px 0;
+  }
+
+  footer label {
+    display: block;
   }
 }
