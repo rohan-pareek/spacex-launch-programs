@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+## Website link
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[SpaceX Launch Programs](https://ps-spacex.netlify.app)
+
+## Website details
+
+This website allows any user to browse all SpaceX launch programs.\
+User can filter by launch date, successful launch and successful landing.
+
+Each program card will display details like Mission name, logo, launch year etc.
+
+In addition to this, this site is fully responsive and can be viewed \
+in pc, laptop and mobile devices.
+
+## Technology stack used
+
+* ReactJS
+* Redux
+* React-redux
+* Redux-thunk
+* SpaceXdata API
+
+## Steps to run the project in local
+
+Run the following command inside project directory
+
+* npm install
+* npm start
+* app will open in your browser at port 3000
 
 ## Available Scripts
 

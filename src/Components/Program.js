@@ -33,7 +33,10 @@ export default function Program({program}) {
 
             <div className="land-success">
                 <label>Successful Landing:</label>
-                {program.land_success?.toString()}
+                {program.rocket.first_stage.cores[0].land_success
+                ?program.rocket.first_stage.cores[0].land_success.toString()
+                :'false'
+            }
             </div>
 
         </div>
