@@ -82,8 +82,7 @@ function Filter(props) {
         return () => {
             window.removeEventListener('keydown', handleListner);
         };
-    },
-        [activeYear, activeLaunchStatus, activeLandStatus, currentSection]);
+    },);
 
     return (
         <>
