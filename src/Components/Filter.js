@@ -18,10 +18,10 @@ function Filter(props) {
         setCurrentSection('year');
         setActiveYear(year);
         let url = `https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${year}`;
-        if (activeLaunchStatus) {
+        if (activeLaunchStatus === false || activeLaunchStatus) {
             url += `&launch_success=${activeLaunchStatus}`;
         }
-        if (activeLandStatus) {
+        if (activeLandStatus === false || activeLandStatus) {
             url += `&land_success=${activeLandStatus}`;
         }
         props.fetchPrograms({ url });
